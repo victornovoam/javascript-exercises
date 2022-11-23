@@ -48,13 +48,15 @@ for (let i = 10; i>0; i--) {
     // For loop goes here:
 
 
-    // #7 This for loop prints a 3x3 square of #s. Use a nested for-loop to make it print a square of numbers instead 89(123, 456, 7)
-    let line = ""
+    // #7 This for loop prints a 3x3 square of #s. Use a nested for-loop to make it print a square of numbers instead (123, 456, 789)
     
-    for (let i=0; i<3; i++) {
-        for (let j=1; j<=3; j++){
+    var counter = 1
+    for (let i=1; i<=3; i++) {
+        let line = ""
+        for (let j = counter; j<(counter + 3); j++){
             line += j
         }
+        counter = counter + 3
         console.log(line)
     }
     
@@ -88,14 +90,13 @@ for (let i = 10; i>0; i--) {
     let x = 0
     let y = 1
     
-    while (bigFib<5000) {
+    while ((x+y)<5000) {
       bigFib = x + y
       x = y
       y = bigFib
-      if (bigFib>5000){
-        break
-      }
-      console.log(bigFib)
+
+      
+      console.log(bigFib + ", ")
     }
     
 
